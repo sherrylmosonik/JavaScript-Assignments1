@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Filter Students by Course & Skill</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f0c2c2;
+      color: #333;
+      
+    }
+    .student-card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 7px;
+      margin: 10px;
+      width: 370px;
+      display: inline-block;
+      text-align: center;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .student-photo {
+      width: 80px;
+      height: 80px;
+      border-radius: 7px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+    #filterSection {
+      margin-bottom: 20px;
+      text-align: center;
+      background-color: #926969;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+  
+    }
+    select,option{
+      padding: 15px;
+      border-radius: 8px;
+      border: 1px solid #5f5656;
+      font-size: 16px;
+      width: 300px;
+      background-color: #e4d9d9;
+    }
+    .selection {
+      display: flex;
+      flex-direction: column;
+      margin-right: 10px;
+      align-items: center;
+      
+    }
+    button {
+      background-color: #e4d9d9;
+      color: rgb(14, 13, 13);
+      font-size: 20px;
+      border: none;
+      padding: 15px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-left: 10px;
+      width: 300px;
+      position: relative;
+      top: 10px;
+    }
+    button:hover {
+      background-color: #865c5c;
+    }
+    h2{
+      text-align: center;
+      color: #333;
+      font-family: Arial, sans-serif;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Student Profiles</h2>
+
+  <div id="filterSection">
+    <!-- Dropdown for course selection -->
+    
+     <div class="selection">
+    <label for="courseFilter"style="font-size:22px;"><b>Filter by Course:</b> </label>
+    <select id="courseFilter">
+      <option value="all">All Courses</option>
+      <option value="Computer Science">Computer Science</option>
+      <option value="Information Technology">Information Technology</option>
+      <option value="Software Engineering">Software Engineering</option>
+    </select>
+</div>
+    <!-- Button for filtering by JavaScript skill -->
+    <button id="jsFilterBtn">Show JavaScript Students</button>
+  </div>
+  
+
+  <div id="studentsContainer"></div>
+  <script src="/ASSIGNMENTS/dom.js"></script>
+  </body>
+</html>
